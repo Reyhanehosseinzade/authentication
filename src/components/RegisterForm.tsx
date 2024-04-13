@@ -5,7 +5,6 @@ import {
 } from "react-icons/ai";
 import InputField from "./InputField";
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
 import {auth} from "../firebase/config"
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
@@ -27,7 +26,6 @@ export function RegisterForm({
   const {
     register,
     handleSubmit,
-    control,
     formState: { errors },
   } = useForm<RegisterFormValues>();
   
@@ -198,7 +196,6 @@ export function RegisterForm({
           </button>
         </div>
       </form>
-      <DevTool control={control} />
       <div className="form-bottom-links flex justify-between text-sm underline ">
         <button id="register-btn" onClick={loginView}>
           Sign In
