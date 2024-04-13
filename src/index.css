@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --first-color: #7d476c;
+  --bg-color: #dddddd;
+  --white-color: #ffffff;
+}
+main {
+  background: var(--bg-color);
+}
+.fluid-1 {
+  width: 330px;
+  position: absolute;
+}
+.form-bottom-links {
+  color: var(--first-color);
+}
+
+.fluid .fluid-animate {
+  animation: scale 0.6s ease alternate 2;
+  z-index: 100;
+}
+
+@keyframes scale {
+  from {
+    transform: rotate(90deg) scale(1);
+  }
+  to {
+    transform: rotate(90deg) scale(5);
+  }
+}
